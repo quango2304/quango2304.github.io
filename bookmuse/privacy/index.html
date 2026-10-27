@@ -17,7 +17,7 @@
   </nav>
 
   <h1>Bookmuse Privacy Policy</h1>
-  <p class="lead">You can read in Bookmuse without an account, and then your library stays on your device. If you sign in with Apple or Google, we store your library on our servers in Japan so it syncs between your devices. Online features send only what they need. We don't show ads, sell your data or track you across other apps and websites. You can delete your account and its data at any time, in the app or by email.</p>
+  <p class="lead">You can read in Bookmuse without an account, and then your library stays on your device. If you sign in (with Apple, Google or an email and password), we store your library on our servers in Japan so it syncs between your devices. Online features send only what they need. We don't show ads, sell your data or track you across other apps and websites. You can delete your account and its data at any time, in the app or by email.</p>
   <p class="meta">Applies to Bookmuse · Last updated: October 27, 2026 · Also at <a href="https://bookmuse.date/privacy/">bookmuse.date/privacy</a> (with Vietnamese and Spanish) · Delete your account: <a href="https://bookmuse.date/delete-account/">bookmuse.date/delete-account</a></p>
 
   <section class="card">
@@ -30,13 +30,14 @@
   </section>
   <section class="card">
     <h2>Your account</h2>
-    <p>You sign in with Apple or with Google. There is no Bookmuse password. From the sign-in we receive:</p>
+    <p>You sign in with Apple, with Google, or with your email and a Bookmuse password. From an Apple or Google sign-in we receive:</p>
     <ul>
       <li><strong>An account ID</strong> from Apple or Google, which identifies you to us.</li>
       <li><strong>Your email address</strong> and whether it is verified. With Apple's Hide My Email, this is a private relay address that Apple forwards to you. If the same verified email signs in with both Apple and Google, it is one Bookmuse account.</li>
       <li><strong>Your name.</strong> Apple shares it only the first time you sign in, if you choose to. Google shares the name on your Google Account. You can change it in the app.</li>
       <li><strong>Your Google profile photo</strong> (Google only): if your Bookmuse account has no picture yet, we copy it once as your profile picture. Later changes to your Google photo don't follow, and you can change or remove the picture in the app.</li>
     </ul>
+    <p>If you use an email and password, we email you a 6-digit code to prove the address is yours when you create the account, add a password or reset it. These emails are sent through Oracle Cloud Infrastructure Email Delivery. We keep your password only as a one-way hash (argon2id), never the password itself, and the codes only as hashes. After 10 wrong passwords in a row we lock sign-in for that email for 15 minutes.</p>
     <p>Each sign-in on a device, the web dashboard or an AI agent is a session. For each one we keep the device type, the app version and when it was last used. We keep sign-in tokens only as one-way hashes. We also count how much you use limited features (cloud storage, BookMuse AI, share links, feed posts) so we can apply the free plan's limits.</p>
   </section>
   <section class="card">
@@ -117,7 +118,7 @@
   <section class="card">
     <h2>Server logs and security</h2>
     <p>For each request our server logs the time, the address path, the result, how long it took, the app's platform and version, and your account ID if you're signed in. Logs never contain your books, notes, words, AI content, passwords or tokens, and they are kept only for a short time. Cloudflare and our servers use IP addresses to deliver traffic and to limit abuse; we don't store them with your account.</p>
-    <p>Other protections: private storage reached only through short-lived signed links, sign-in tokens stored as hashes, provider tokens encrypted, and a fresh sign-in required before an account is deleted. No system is perfectly secure, but we work to keep your data safe.</p>
+    <p>Other protections: private storage reached only through short-lived signed links, sign-in tokens stored as hashes, provider tokens encrypted, passwords kept only as one-way hashes, and a fresh sign-in or your password required before an account is deleted. No system is perfectly secure, but we work to keep your data safe.</p>
   </section>
   <section class="card">
     <h2>What we don't do</h2>
@@ -129,12 +130,13 @@
   </section>
   <section class="card">
     <h2>Who receives data</h2>
-    <p>Only the companies that run parts of Bookmuse for us, each for its part: Oracle (servers and storage), Cloudflare (network delivery and protection), OpenRouter and the AI model provider it uses (BookMuse AI), Apple and Google (sign-in, and ML Kit on Android), and Google Drive or Dropbox if you connect them. What you publish in the feed or through a share link is visible as described above. We may disclose data if the law requires it. If Bookmuse is ever transferred to someone else, this policy keeps applying to the data collected under it.</p>
+    <p>Only the companies that run parts of Bookmuse for us, each for its part: Oracle (servers, storage and sign-in emails), Cloudflare (network delivery and protection), OpenRouter and the AI model provider it uses (BookMuse AI), Apple and Google (sign-in, and ML Kit on Android), and Google Drive or Dropbox if you connect them. What you publish in the feed or through a share link is visible as described above. We may disclose data if the law requires it. If Bookmuse is ever transferred to someone else, this policy keeps applying to the data collected under it.</p>
   </section>
   <section class="card">
     <h2>How long we keep data</h2>
     <ul>
       <li>Your account and library: until you delete them or your account.</li>
+      <li>Emailed sign-in codes: deleted within a day.</li>
       <li>Lookup history: 30 days. AI usage counts: 40 days. Reported AI answers: 180 days. Ended sessions: deleted within about a week.</li>
       <li>Share links stop working after 7 days.</li>
       <li>Items you delete (a highlight, word, note, chat or post) disappear from your devices and the feed at once. Their last text stays hidden in your account until you use Erase All Data or delete your account, and then it is deleted.</li>

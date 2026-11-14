@@ -17,8 +17,8 @@
   </nav>
 
   <h1>Auto Translate Privacy Policy</h1>
-  <p class="lead">Auto Translate sends the text it translates to Google Translate, and nothing else to anyone. I don't run any servers and I don't collect anything about you.</p>
-  <p class="meta">Applies to the Auto Translate extension for Chrome · Last updated: November 14, 2026</p>
+  <p class="lead">Auto Translate sends the text it translates to the translation service you use (Google Translate unless you choose another), and nothing else to anyone. I don't run any servers and I don't collect anything about you.</p>
+  <p class="meta">Applies to the Auto Translate extension for Chrome · Last updated: November 15, 2026</p>
 
   <section class="card">
     <h2>Data I collect</h2>
@@ -26,21 +26,35 @@
   </section>
 
   <section class="card">
-    <h2>What is sent to Google for translation</h2>
-    <p>To translate, the extension sends text to Google Translate and puts the result back on the page:</p>
+    <h2>What is sent for translation</h2>
+    <p>To translate, the extension sends text to a translation service and puts the result back on the page:</p>
     <ul>
-      <li><strong>Web page text.</strong> When a page is in a language you don't read, the visible text of that page (and labels such as placeholders, tooltips and image descriptions) is sent to Google Translate. Pages in your own languages, sites you've marked “Never translate”, and all pages while automatic translation is off are not sent.</li>
-      <li><strong>Text you type, only when you ask.</strong> Text in a text box is sent only when you press the convert button or its keyboard shortcut. Text you type is never sent otherwise, and password fields are ignored.</li>
+      <li><strong>Web page text.</strong> When a page is in a language you don't read, the visible text of that page (and labels such as placeholders, tooltips and image descriptions) is sent for translation. Pages in your own languages, sites you've marked “Never translate”, and all pages while automatic translation is off are not sent.</li>
+      <li><strong>Text you type, only when you ask.</strong> Text in a text box is sent only when you press the convert button or its keyboard shortcut, or press Enter in the search box of a site in a language you don't read (if “Search in your language” is on). Password fields are ignored.</li>
+      <li><strong>Text you select, only when you ask.</strong> Selected text is sent only when you click the Translate pill.</li>
     </ul>
-    <p>By default the text goes to Google Translate's web service (<code>translate.googleapis.com</code>). If you add your own Google Cloud API key in Settings, it goes to the Google Cloud Translation API (<code>translation.googleapis.com</code>) under your Google Cloud account instead. Either way Google handles it under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
-    <p>The extension sends only the text to be translated and the languages involved. It does not send your browsing history, the addresses of the pages you visit, or any information about you.</p>
+    <h3>Which service receives it</h3>
+    <ul>
+      <li><strong>Google Translate</strong> (<code>translate.googleapis.com</code>), the default, under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</li>
+      <li><strong>Google Cloud Translation API</strong> (<code>translation.googleapis.com</code>), if you add your own Google Cloud key, under your Google Cloud account.</li>
+      <li><strong>An AI service you choose</strong> (OpenAI-compatible or Anthropic-compatible), if you enter its address and key in Settings. Text goes only to the address you entered, under that service's own privacy policy and terms.</li>
+      <li><strong>Chrome's on-device translator</strong>, if you turn on offline translation and the online service can't be reached. This happens entirely on your computer; nothing is sent anywhere.</li>
+    </ul>
+    <p>The extension sends only the text to be translated, the languages involved and, for an AI service, short instructions on how to translate. It does not send your browsing history, the addresses of the pages you visit, or any information about you.</p>
+  </section>
+
+  <section class="card">
+    <h2>Exchange rates</h2>
+    <p>If “Show prices and units in yours” is on, the extension downloads public exchange rates about once a day from <code>open.er-api.com</code> (ExchangeRate-API). That request contains no page content and nothing about you.</p>
   </section>
 
   <section class="card">
     <h2>Stored in your browser</h2>
     <ul>
       <li><strong>Your settings</strong>: your languages, whether the text-box button is on, and the list of sites you chose never to translate. These are kept in Chrome's storage and, if you use Chrome sync, follow your Google account to your other computers.</li>
-      <li><strong>Your Google Cloud API key</strong>, if you add one. It is kept only on this computer and only sent to Google with translation requests.</li>
+      <li><strong>Your API keys</strong> (Google Cloud or an AI service), if you add them. They are kept only on this computer and only sent to the service they belong to, with translation requests.</li>
+      <li><strong>The words you chose never to translate</strong>, with your settings.</li>
+      <li><strong>Exchange rates</strong>, cached for a day.</li>
       <li><strong>Recent translations</strong> are kept in memory so the same text isn't translated twice. They are discarded when Chrome closes the extension's background process.</li>
     </ul>
     <p>Remove the extension to delete everything it stored.</p>
@@ -48,12 +62,12 @@
 
   <section class="card">
     <h2>Permissions</h2>
-    <p><strong>Read and change data on websites</strong> is needed to find a page's text, replace it with the translation, and show the convert button inside text boxes. <strong>Storage</strong> keeps your settings. Access to <strong>translate.googleapis.com</strong> and <strong>translation.googleapis.com</strong> is used only to request translations.</p>
+    <p><strong>Read and change data on websites</strong> is needed to find a page's text, replace it with the translation, and show the convert button inside text boxes. <strong>Storage</strong> keeps your settings. Access to <strong>translate.googleapis.com</strong> and <strong>translation.googleapis.com</strong> is used only to request translations. If you set up an AI service, Chrome asks you to allow access to that one address, and it is used only to request translations.</p>
   </section>
 
   <section class="card">
     <h2>How data is used</h2>
-    <p>Text is used only to translate it for you. It is not sold, not used for advertising or credit decisions, and not shared with anyone other than Google for the translation itself. The use of data complies with the Chrome Web Store User Data Policy, including the Limited Use requirements.</p>
+    <p>Text is used only to translate it for you. It is not sold, not used for advertising or credit decisions, and not shared with anyone other than the translation service you use, for the translation itself. The use of data complies with the Chrome Web Store User Data Policy, including the Limited Use requirements.</p>
   </section>
 
   <section class="card">
